@@ -1,4 +1,4 @@
-module github.com/gin-contrib/logger
+module github.com/xlyk/logger
 
 go 1.13
 
