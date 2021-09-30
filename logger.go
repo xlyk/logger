@@ -1,13 +1,12 @@
 package logger
 
 import (
+	"github.com/gin-gonic/gin"
+	"github.com/rs/zerolog"
 	"io"
 	"net/http"
 	"regexp"
 	"time"
-
-	"github.com/gin-gonic/gin"
-	"github.com/rs/zerolog"
 )
 
 func defaultLogger(c *gin.Context, out io.Writer, latency time.Duration) zerolog.Logger {
