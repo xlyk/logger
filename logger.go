@@ -19,6 +19,8 @@ func defaultLogger(c *gin.Context, out io.Writer, latency time.Duration) zerolog
 		Str("ip", c.ClientIP()).
 		Dur("latency", latency).
 		Str("user_agent", c.Request.UserAgent()).
+		Str("bling_rid", c.GetHeader("bling-rid")).
+		Str("bling_uid", c.GetHeader("bling-uid")).
 		Logger()
 
 	return logger
